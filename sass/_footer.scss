@@ -1,0 +1,115 @@
+            /* Footer */
+
+            @media (max-width:767.98px) {
+
+                footer {
+                    background-color: #353535;
+                    color: white;
+                    padding-left: 25px;
+                    padding-top: 22px;
+                    padding-bottom: 22px;
+                }
+
+
+
+                .footer_logo {
+                    font-family: "shrikhand", cursive;
+                    margin-bottom: 16px;
+                }
+
+                .footer {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 7px;
+
+                    & .footer_contentOne {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    & .footer_contentTwo {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+
+                    .fa-utensils {
+                        margin-right: 11px;
+                    }
+
+                    .fa-handshake-angle {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+
+            @media (min-width:767.99px) {
+
+                footer {
+                    height: 114px;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: end;
+                    background-color: #353535;
+                    color: white;
+                    padding-bottom: 30px;
+                    padding-right: 25px;
+
+                    .footer_logo {
+                        width: 139px;
+                        font-family: "shrikhand", cursive;
+                        font-size: 18px;
+                    }
+
+                }
+
+                .footer {
+                    display: flex;
+                    column-gap: 7px;
+
+                    .footer_contentOne {
+                        display: flex;
+                        column-gap: 7px;
+
+                        & .to_propose {
+                            width: 190px;
+                            display: flex;
+                            column-gap: 11px;
+                        }
+
+                        & .to_become {
+                            display: flex;
+                            width: 190px;
+                            column-gap: 10.08px;
+
+                        }
+
+                        & .footer_text {
+                            font-weight: 500;
+                        }
+                    }
+
+                    &_contentTwo {
+                        display: flex;
+                        column-gap: 7px;
+
+                        & .mentions {
+                            width: 130px;
+                        }
+
+                        & .contact {
+                            margin-right: 16px;
+                            width: 130px;
+                        }
+
+                        & .footer_text {
+                            font-weight: 400;
+                        }
+                    }
+
+
+                }
+
+
+            }

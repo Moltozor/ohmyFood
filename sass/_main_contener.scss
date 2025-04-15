@@ -1,0 +1,618 @@
+        /* Main_contener */
+
+
+        @media (max-width:767.98px) {
+            /***************animation loader*******************/
+            $b-c_grenn: #99e2d0;
+            $b-c_white: #ffffff;
+            $b-c_purpul: #9356dc;
+
+            .container-loader {
+                position: fixed;
+                background-color: #ffffff;
+                height: 100vh;
+                inset: 0;
+                opacity: 0.9;
+                z-index: 1;
+                animation: disappear 1s 1s forwards;
+                display: grid;
+                place-items: center;
+            }
+
+            @keyframes disappear {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(0);
+                }
+            }
+
+            .circle-loader {
+                border: 10px solid $b-c_white;
+                border-top: 10px solid $b-c_purpul;
+                border-bottom: 10px solid $b-c_grenn;
+                border-radius: 50%;
+                inset: 0;
+                width: 100px;
+                height: 100px;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .book {
+                padding-top: 39.5px;
+                text-align: center;
+                background-color: var(--primary-color);
+
+                &_discovery {
+                    color: #353535;
+                    font-size: 18px;
+                }
+
+                &_button {
+                    width: 218px;
+                    height: 50px;
+                    margin-top: 27px;
+                    margin-bottom: 57px;
+                    border: none;
+                    border-radius: 25px;
+                    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25%);
+                    color: var(--secondary-color);
+                    font-size: 16px;
+
+                    transition: transform 300ms ease-in-out, background 300ms ease-in-out;
+
+                    &:hover {
+                        background: linear-gradient(to bottom, #FF79DA, #FFFFFF26 15%, #9356DC);
+                        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
+                    }
+                }
+
+            }
+
+            .functioning {
+                padding-top: 48px;
+
+                &_content {
+                    display: flex;
+                    flex-direction: column;
+
+                    &_title {
+                        margin: 0;
+                        margin-left: 20px;
+                        margin-bottom: 26px;
+                    }
+
+
+                    &_button {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 24.92px;
+                        margin-left: 32.51px;
+                        margin-right: 20px;
+
+                        & .choice_menu_restaurants {
+                            width: 100%;
+                            height: 72.38px;
+                            display: flex;
+                            align-items: center;
+                            padding-left: 30px;
+                            position: relative;
+                            border-radius: 20px;
+                            border: none;
+                            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+                            & .circle {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #9356DC;
+                                position: absolute;
+                                left: -14px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            & .fa-solid {
+                                margin-right: 7.75%;
+                            }
+
+                            &_text {
+                                display: inline-flex;
+                                width: 211px;
+                                font-weight: 500;
+                                font-size: 16px;
+                                margin-right: 11.78%;
+                            }
+                        }
+
+                    }
+
+
+                }
+            }
+
+            .restaurants {
+                background-color: var(--primary-color);
+                padding-bottom: 66px;
+
+                &_title {
+                    margin-left: 20px;
+                }
+
+                &_menu {
+                    margin-left: 14px;
+                    margin-right: 15px;
+                }
+            }
+
+            /* Responsive restaurants */
+
+            .main_content {
+                background-color: var(--primary-color);
+                position: relative;
+
+                .img_content {
+                    display: flex;
+                    width: 100%;
+                    height: 275px;
+                }
+
+                .titled_content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 32px;
+                    margin-left: 4.5%;
+
+                    .title {
+                        margin: 0;
+                        font-family: 'shrikhand', sans-serif;
+                        font-weight: 400;
+                        font-size: 28px;
+                    }
+
+                    .heart {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        right: 15%;
+                        height: fit-content;
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        padding: 0;
+
+
+                        .fa-solid {
+                            opacity: 0;
+                        }
+
+                        &:hover .fa-heart {
+                            opacity: 0;
+                        }
+
+                        &:hover .fa-solid {
+                            opacity: 1;
+                            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                        }
+
+                        & i {
+                            position: absolute;
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                .principal_frame {
+                    background-color: var(--secondary-color);
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 40px;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    position: relative;
+                    top: -55px;
+                }
+
+                .content_menu {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 12px;
+                    box-sizing: border-box;
+                    margin-left: 13px;
+                    margin-right: 13px;
+
+
+
+                    .content_title {
+                        font-weight: 300;
+                        font-size: 16px;
+                    }
+
+                }
+
+                .card {
+                    background-color: var(--secondary-color);
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 5px;
+                    border-radius: 15.04px;
+                    padding: 12px 15px;
+                    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+
+
+                    &_title {
+                        margin: 0;
+                    }
+
+                    &_description {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+            .order {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+
+                .button_order {
+                    width: 49.6%;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                    border-radius: 25px;
+                    border: none;
+                    background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+
+
+                }
+
+                .button_text {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--secondary-color);
+                }
+            }
+        }
+
+
+
+        @media (min-width:767.99px) {
+
+            /***************animation loader*******************/
+            $b-c_grenn: #99e2d0;
+            $b-c_white: #ffffff;
+            $b-c_purpul: #9356dc;
+
+            .container-loader {
+                position: fixed;
+                background-color: #ffffff;
+                height: 100vh;
+                inset: 0;
+                opacity: 0.9;
+                z-index: 1;
+                animation: disappear 1s 1s forwards;
+                display: grid;
+                place-items: center;
+            }
+
+            @keyframes disappear {
+                0% {
+                    transform: scale(1);
+                }
+
+                100% {
+                    transform: scale(0);
+                }
+            }
+
+            .circle-loader {
+                border: 10px solid $b-c_white;
+                border-top: 10px solid $b-c_purpul;
+                border-bottom: 10px solid $b-c_grenn;
+                border-radius: 50%;
+                inset: 0;
+                width: 100px;
+                height: 100px;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .book {
+                flex-direction: column;
+                display: flex;
+                background-color: var(--primary-color);
+                justify-content: center;
+                align-items: center;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                row-gap: 18px;
+
+                &_title {
+                    margin: 0;
+                }
+
+                &_br {
+                    display: none;
+                }
+
+                &_button {
+                    width: 218px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 25px;
+                    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+                    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+                    color: var(--secondary-color);
+                    font-size: 16px;
+                    transition: all 300ms;
+
+                    &_text {
+                        transition-delay: 400ms;
+                    }
+
+                    &:hover {
+                        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
+                        opacity: 0.8;
+
+                        .book_button_text {
+                            transform: translate(-0.5px, 0.2px);
+                        }
+                    }
+
+
+
+                }
+
+                &_discovery {
+                    color: #353535;
+                    font-weight: 300;
+                    font-size: 18px;
+
+                }
+
+            }
+
+            .functioning {
+                width: 75%;
+                padding-left: 8%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+
+                &_content {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 25px;
+
+                    &_button {
+                        display: flex;
+                        column-gap: 36.51px;
+
+                        & .choice_menu_restaurants {
+                            width: 100%;
+                            height: 72.38px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            position: relative;
+                            border-radius: 20px;
+                            border: none;
+                            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+                            & .circle {
+                                width: 24px;
+                                height: 24px;
+                                border-radius: 50%;
+                                background-color: #9356DC;
+                                position: absolute;
+                                left: -14px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: white;
+                            }
+
+                            & .fa-solid {
+                                margin-right: 15px;
+                                margin-left: 30px;
+                            }
+
+                            &_text {
+                                display: inline-flex;
+                                width: 100%;
+                                font-weight: 500;
+                                font-size: 16px;
+                                margin-right: 38px;
+                            }
+                        }
+
+                    }
+
+
+                }
+            }
+
+            /* Responsive restaurants */
+
+            .img_content {
+                width: 100%;
+                height: 383px;
+                display: flex;
+                object-fit: cover;
+                position: relative;
+            }
+
+            .principal_frame {
+                background-color: var(--primary-color);
+                position: relative;
+                margin-top: -40.34px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 40px;
+                width: 73.26%;
+                margin-inline: auto;
+                padding-top: 51px;
+                padding-bottom: 40px;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+
+                .titled_content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .title {
+                        font-family: 'shrikhand', sans-serif;
+                        font-weight: 400;
+                        font-size: 28px;
+                        margin: 0;
+                        margin-right: 24px;
+                    }
+
+
+
+                    .heart {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        height: fit-content;
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        padding: 0;
+
+                        .fa-solid {
+                            opacity: 0;
+                        }
+
+                        &:hover .fa-heart {
+                            opacity: 0;
+                        }
+
+                        &:hover .fa-solid {
+                            opacity: 1;
+                            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            text-fill-color: transparent;
+                        }
+
+                        & i {
+                            position: absolute;
+                            font-size: 22px;
+                        }
+                    }
+                }
+
+                $numb_menu: 3;
+                $anim_duration: 2000ms;
+                $anim_delay: $anim_duration / $numb_menu;
+
+                .content_menu {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 12px;
+                    margin-inline: 19.9%;
+                    animation: content_menu 1000ms;
+                    transform-origin: top;
+
+                    @for $i from 1 through $numb_menu {
+                        &--#{$i} {
+                            animation-delay: $anim_delay * $i;
+                        }
+                    }
+
+                    .content_title {
+                        font-weight: 300;
+                        font-size: 16px;
+                    }
+
+                    .card {
+                        background-color: var(--secondary-color);
+                        width: 100%;
+                        box-sizing: border-box;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 5px;
+                        border-radius: 15.04px;
+                        padding: 12px 15px;
+                        box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+
+
+                        &_title {
+                            margin: 0;
+                        }
+
+                        &_description {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .price {
+                                font-weight: 700;
+                                font-size: 15.04px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .order {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+
+                .button_order {
+                    width: 17.63%;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                    border-radius: 25px;
+                    border: none;
+                    background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+
+
+                }
+
+                .button_text {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--secondary-color);
+                }
+            }
+        }
