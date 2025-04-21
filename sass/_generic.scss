@@ -36,3 +36,12 @@ a {
         transform: scaleY(1);
     }
 }
+
+@keyframes choice {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}

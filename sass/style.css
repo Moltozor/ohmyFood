@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body,
 p {
   margin: 0;
@@ -29,6 +30,14 @@ a {
   }
   to {
     transform: scaleY(1);
+  }
+}
+@keyframes choice {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 /* Header */
@@ -79,7 +88,16 @@ a {
     height: 63px;
   }
   .restau_header a {
-    background-color: red;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    left: 17px;
+  }
+  .restau_header a i {
+    color: #353535;
   }
 }
 @media (min-width: 767.99px) {
@@ -338,18 +356,45 @@ a {
   .main_content .card {
     background-color: var(--secondary-color);
     display: flex;
-    flex-direction: column;
-    row-gap: 5px;
+    flex-direction: row;
     border-radius: 15.04px;
-    padding: 12px 15px;
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   }
-  .main_content .card_title {
+  .main_content .card .card_description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    row-gap: 5px;
+  }
+  .main_content .card .card_description .card_title {
     margin: 0;
   }
-  .main_content .card_description {
+  .main_content .card .card_description .card_ingrédients {
     display: flex;
     justify-content: space-between;
+  }
+  .main_content .card .card_description .card_ingrédients .price {
+    font-weight: 700;
+    font-size: 15.04px;
+  }
+  .main_content .card .choice {
+    display: none;
+  }
+  .main_content .card:active .choice {
+    width: 59px;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15.04px;
+    border-bottom-right-radius: 15.04px;
+    animation: choice 600ms ease-in-out;
+    transform-origin: right;
+  }
+  .main_content .card:active .choice .fa-circle-check {
+    color: white;
   }
   .order {
     display: flex;
@@ -592,22 +637,42 @@ a {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     row-gap: 5px;
     border-radius: 15.04px;
-    padding: 12px 15px;
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   }
-  .principal_frame .content_menu .card_title {
+  .principal_frame .content_menu .card .card_description {
+    width: 100%;
+    padding: 12px 15px;
+  }
+  .principal_frame .content_menu .card .card_description .card_title {
     margin: 0;
   }
-  .principal_frame .content_menu .card_description {
+  .principal_frame .content_menu .card .card_description .card_ingrédients {
     display: flex;
     justify-content: space-between;
   }
-  .principal_frame .content_menu .card_description .price {
+  .principal_frame .content_menu .card .card_description .card_ingrédients .price {
     font-weight: 700;
     font-size: 15.04px;
+  }
+  .principal_frame .content_menu .card .choice {
+    display: none;
+  }
+  .principal_frame .content_menu .card:active .choice {
+    width: 59px;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15.04px;
+    border-bottom-right-radius: 15.04px;
+    animation: choice 600ms ease-in-out;
+    transform-origin: right;
+  }
+  .principal_frame .content_menu .card:active .choice .fa-circle-check {
+    color: white;
   }
   .order {
     display: flex;

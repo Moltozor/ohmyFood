@@ -251,21 +251,59 @@
                 .card {
                     background-color: var(--secondary-color);
                     display: flex;
-                    flex-direction: column;
-                    row-gap: 5px;
+                    flex-direction: row;
                     border-radius: 15.04px;
-                    padding: 12px 15px;
                     box-shadow: 0px 4.01px 15.04px 0px #0000001A;
 
-
-                    &_title {
-                        margin: 0;
-                    }
-
-                    &_description {
+                    .card_description {
+                        width: 100%;
                         display: flex;
-                        justify-content: space-between;
+                        flex-direction: column;
+                        padding: 12px 15px;
+                        box-sizing: border-box;
+                        row-gap: 5px;
+
+
+                        .card_title {
+                            margin: 0;
+                        }
+
+                        .card_ingrédients {
+                            display: flex;
+                            justify-content: space-between;
+
+
+                            .price {
+                                font-weight: 700;
+                                font-size: 15.04px;
+                            }
+                        }
+
                     }
+
+                    .choice {
+                        display: none;
+                    }
+
+                    &:active {
+
+                        .choice {
+                            width: 59px;
+                            background-color: #99E2D0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-top-right-radius: 15.04px;
+                            border-bottom-right-radius: 15.04px;
+                            animation: choice 600ms ease-in-out;
+                            transform-origin: right;
+
+                            .fa-circle-check {
+                                color: white;
+                            }
+                        }
+                    }
+
                 }
             }
 
@@ -564,26 +602,53 @@
                         width: 100%;
                         box-sizing: border-box;
                         display: flex;
-                        flex-direction: column;
+                        justify-content: space-between;
                         row-gap: 5px;
                         border-radius: 15.04px;
-                        padding: 12px 15px;
                         box-shadow: 0px 4.01px 15.04px 0px #0000001A;
 
 
-                        &_title {
-                            margin: 0;
-                        }
+                        .card_description {
+                            width: 100%;
+                            padding: 12px 15px;
 
-                        &_description {
-                            display: flex;
-                            justify-content: space-between;
+                            .card_title {
+                                margin: 0;
+                            }
 
-                            .price {
-                                font-weight: 700;
-                                font-size: 15.04px;
+                            .card_ingrédients {
+                                display: flex;
+                                justify-content: space-between;
+
+                                .price {
+                                    font-weight: 700;
+                                    font-size: 15.04px;
+                                }
                             }
                         }
+
+                        .choice {
+                            display: none;
+                        }
+
+                        &:active {
+                            .choice {
+                                width: 59px;
+                                background-color: #99E2D0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-top-right-radius: 15.04px;
+                                border-bottom-right-radius: 15.04px;
+                                animation: choice 600ms ease-in-out;
+                                transform-origin: right;
+
+                                .fa-circle-check {
+                                    color: white;
+                                }
+                            }
+                        }
+
                     }
 
                 }

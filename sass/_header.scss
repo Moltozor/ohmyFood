@@ -53,8 +53,19 @@
         align-items: center;
         height: 63px;
 
-        & a {
-            background-color: red;
+        a {
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            left: 17px;
+
+            i {
+                color: #353535;
+
+            }
         }
     }
 }
