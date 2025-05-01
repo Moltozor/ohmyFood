@@ -52,6 +52,7 @@
 
             .book {
                 padding-top: 39.5px;
+                padding-bottom: 57px;
                 text-align: center;
                 background-color: var(--primary-color);
 
@@ -60,23 +61,32 @@
                     font-size: 18px;
                 }
 
-                &_button {
+                &_link {
                     width: 218px;
                     height: 50px;
+                    margin-inline: auto;
                     margin-top: 27px;
-                    margin-bottom: 57px;
-                    border: none;
+                    display: flex;
+                    text-decoration: none;
+                    justify-content: center;
+                    align-items: center;
                     border-radius: 25px;
                     background: linear-gradient(to bottom, #FF79DA, #9356DC);
-                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25%);
-                    color: var(--secondary-color);
-                    font-size: 16px;
-
+                    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
                     transition: transform 300ms ease-in-out, background 300ms ease-in-out;
+
+                    &_text {
+                        font-weight: 400;
+                        color: var(--secondary-color);
+                    }
 
                     &:hover {
                         background: linear-gradient(to bottom, #FF79DA, #FFFFFF26 15%, #9356DC);
                         filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
+
+                        .book_link_text {
+                            transform: translate(-0.5px, 0.2px);
+                        }
                     }
                 }
 
@@ -209,8 +219,8 @@
                         &:hover .fa-solid {
                             opacity: 1;
                             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                            -webkit-text-fill-color: transparent;
-                            background-clip: text;
+                            color: transparent;
+                            background-clip: text; // applique un fond sur le texte
                         }
 
                         & i {
@@ -262,18 +272,32 @@
                         padding: 12px 15px;
                         box-sizing: border-box;
                         row-gap: 5px;
+                        overflow: hidden;
 
 
                         .card_title {
                             margin: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
 
                         .card_ingrédients {
                             display: flex;
                             justify-content: space-between;
+                            white-space: nowrap;
+                            overflow: hidden;
+
+                            .text {
+                                margin-right: 5px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
 
 
                             .price {
+                                flex-shrink: 0; // ajoue
                                 font-weight: 700;
                                 font-size: 15.04px;
                             }
@@ -286,6 +310,10 @@
                     }
 
                     &:active {
+
+                        //.price {
+                        //    display: none;
+                        //}
 
                         .choice {
                             width: 59px;
@@ -405,18 +433,21 @@
                     display: none;
                 }
 
-                &_button {
+                &_link {
                     width: 218px;
                     height: 50px;
-                    border: none;
+                    display: flex;
+                    text-decoration: none;
+                    justify-content: center;
+                    align-items: center;
                     border-radius: 25px;
                     background: linear-gradient(to bottom, #FF79DA, #9356DC);
                     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
-                    color: var(--secondary-color);
-                    font-size: 16px;
                     transition: all 300ms;
 
                     &_text {
+                        font-weight: 400;
+                        color: var(--secondary-color);
                         transition-delay: 400ms;
                     }
 
@@ -424,8 +455,8 @@
                         filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
                         opacity: 0.8;
 
-                        .book_button_text {
-                            transform: translate(-0.5px, 0.2px);
+                        .book_link_text {
+                            transform: translate(-0.5px, 0.4px);
                         }
                     }
 
@@ -561,8 +592,8 @@
                         &:hover .fa-solid {
                             opacity: 1;
                             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
+                            background-clip: text; // applique un fond sur le texte
+                            color: transparent;
                         }
 
                         & i {
