@@ -1,48 +1,43 @@
             /* Footer */
-
-            @media (max-width:767.98px) {
-
-                footer {
-                    background-color: #353535;
-                    color: white;
-                    padding-left: 25px;
-                    padding-top: 22px;
-                    padding-bottom: 22px;
-                }
-
-
-
-                .footer_logo {
-                    font-family: "shrikhand", cursive;
-                    margin-bottom: 16px;
-                }
-
-                .footer {
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 7px;
-
-                    & .footer_contentOne {
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    & .footer_contentTwo {
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-
-                    .fa-utensils {
-                        margin-right: 11px;
-                    }
-
-                    .fa-handshake-angle {
-                        margin-right: 5px;
-                    }
-                }
+            footer {
+                background-color: #353535;
+                color: white;
+                padding-left: 25px;
+                padding-top: 22px;
+                padding-bottom: 22px;
             }
 
+
+
+            .footer_logo {
+                font-family: "shrikhand", cursive;
+                margin-bottom: 16px;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                row-gap: 7px;
+
+                .footer_contentOne {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .footer_contentTwo {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+
+                .fa-utensils {
+                    margin-right: 11px;
+                }
+
+                .fa-handshake-angle {
+                    margin-right: 5px;
+                }
+            }
 
             @media (min-width:767.99px) {
 
@@ -60,22 +55,25 @@
                         width: 139px;
                         font-family: "shrikhand", cursive;
                         font-size: 18px;
+                        margin: 0;
                     }
 
                 }
 
                 .footer {
                     display: flex;
+                    flex-direction: row;
                     column-gap: 7px;
 
                     .footer_contentOne {
                         display: flex;
+                        flex-direction: row;
                         column-gap: 7px;
 
                         & .to_propose {
-                            width: 190px;
                             display: flex;
                             column-gap: 11px;
+                            white-space: nowrap;
                         }
 
                         & .to_become {
@@ -90,8 +88,9 @@
                         }
                     }
 
-                    &_contentTwo {
+                    .footer_contentTwo {
                         display: flex;
+                        flex-direction: row;
                         column-gap: 7px;
 
                         & .mentions {
@@ -108,6 +107,13 @@
                         }
                     }
 
+                    .fa-utensils {
+                        margin: 0;
+                    }
+
+                    .fa-handshake-angle {
+                        margin: 0;
+                    }
 
                 }
 

@@ -1,92 +1,88 @@
-@media (max-width: 767.98px) {
+.restaurants_menu {
+    display: grid;
+    row-gap: 18px;
+}
 
-    .restaurants_menu {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        row-gap: 18px;
-    }
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-    .card {
+    .new {
+        position: absolute;
+        top: 10px;
+        right: 17px;
+        width: 80px;
+        height: 29px;
         display: flex;
-        flex-direction: column;
-        position: relative;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        background-color: #99E2D0;
+        color: #008766;
+    }
 
-        .new {
-            position: absolute;
-            top: 10px;
-            right: 17px;
-            width: 80px;
-            height: 29px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 2px;
-            background-color: #99E2D0;
-            color: #008766;
+
+    & img {
+        height: 231px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    &_content {
+        background-color: white;
+        height: 77px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        &_Info {
+            padding-left: 13px;
+
+            &_title {
+                margin-top: 16px;
+                margin-bottom: 5px;
+            }
+
         }
 
+        &_Heart {
+            width: 50px;
+            position: relative;
 
-        & img {
-            height: 231px;
-            border-top-right-radius: 15px;
-            border-top-left-radius: 15px;
-        }
-
-        &_content {
-            background-color: white;
-            height: 77px;
-            display: flex;
-            justify-content: space-between;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-
-            &_Info {
-                padding-left: 13px;
-
-                &_title {
-                    margin-top: 16px;
-                    margin-bottom: 5px;
-                }
+            & button {
+                border: none;
+                background: none;
+                cursor: pointer;
+                position: relative;
+                top: 15%;
 
             }
 
-            &_Heart {
-                width: 50px;
-                position: relative;
-                & button {
-                    border: none;
-                    background: none;
-                    cursor: pointer;
-                    position: relative;
-                    top: 15%;
-                    
-                }
+            .fa-solid {
+                opacity: 0;
+            }
 
-                .fa-solid {
-                    opacity: 0;
-                }
+            &:hover .fa-heart {
+                opacity: 0;
+            }
 
-                &:hover .fa-heart {
-                    opacity: 0;
-                }
+            &:hover .fa-solid {
+                opacity: 1;
+                background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
 
-                &:hover .fa-solid {
-                    opacity: 1;
-                    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    text-fill-color: transparent;
-                }
-
-                & i {
-                    position: absolute;
-                    font-size: 22px;
-                }
+            & i {
+                position: absolute;
+                font-size: 22px;
             }
         }
     }
-
 }
 
 @media (min-width:767.99px) {
@@ -156,6 +152,7 @@
                 &_Heart {
                     position: relative;
                     width: 50px;
+
                     & button {
                         border: none;
                         background: none;
@@ -167,11 +164,11 @@
                     .fa-solid {
                         opacity: 0;
                     }
-    
+
                     &:hover .fa-heart {
                         opacity: 0;
                     }
-    
+
                     &:hover .fa-solid {
                         opacity: 1;
                         background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -180,11 +177,11 @@
                         background-clip: text;
                         text-fill-color: transparent;
                     }
-    
+
                     & i {
                         position: absolute;
                         font-size: 22px;
-                    } 
+                    }
 
                 }
             }
